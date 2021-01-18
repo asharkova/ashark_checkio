@@ -13,9 +13,16 @@
 # 
 # END_DESC
 
+import datetime
+
+
 def days_diff(a, b):
-    print(type(a))
-    return None
+    # Converting tuples in datetime object
+    data_a = datetime.datetime(year=a[0], month=a[1], day=a[2])
+    data_b = datetime.datetime(year=b[0], month=b[1], day=b[2])
+    
+    # Calculating difference in days
+    return abs((data_b-data_a).days)
 
 
 if __name__ == '__main__':
